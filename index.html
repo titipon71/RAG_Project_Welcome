@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html lang="th">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ยินดีต้อนรับ | lukeenortaed.site</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Mali:wght@400;600&display=swap");
-      * {
-        font-family: "Mali", sans-serif;
-      }
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        background: linear-gradient(
-          135deg,
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ยินดีต้อนรับ | lukeenortaed.site</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Mali:wght@400;600&display=swap");
+
+    * {
+      font-family: "Mali", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background: linear-gradient(135deg,
           #f50d28,
           #6610f2,
           #00c9ff,
           #92fe9d,
           #ff9966,
-          #ff5e62
-        );
-        background-size: 400% 400%;
-        animation: gradientFlow 15s ease infinite;
+          #ff5e62);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+    }
+
+    @keyframes gradientFlow {
+      0% {
+        background-position: 0% 50%;
       }
-      @keyframes gradientFlow {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
+
+      50% {
+        background-position: 100% 50%;
       }
-      .welcome-box {
-        position: relative;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.67);
-        padding: 3rem;
-        border-radius: 20px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        z-index: 0;
+
+      100% {
+        background-position: 0% 50%;
       }
-      .welcome-box::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        padding: 3px;
-        border-radius: 20px;
-        background: linear-gradient(
-          270deg,
+    }
+
+    .welcome-box {
+      position: relative;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.67);
+      padding: 3rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .welcome-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 3px;
+      border-radius: 20px;
+      background: linear-gradient(270deg,
           #f00,
           #ff7a00,
           #ffee00,
@@ -69,186 +71,181 @@
           #0ff,
           #00f,
           #f0f,
-          #f00
-        );
-        background-size: 400% 400%;
-        animation: rainbowBorder 6s linear infinite;
-        -webkit-mask: linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        z-index: -1;
-      }
-      @keyframes rainbowBorder {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      h1 {
-        font-size: 3rem;
-        font-weight: 600;
-      }
-      p {
-        font-size: 2rem;
-        font-weight: 800;
-      }
-      .btn-custom {
-        margin-top: 1.5rem;
-        background-color: white;
-        color: #6610f2;
-        border-radius: 25px;
-        padding: 0.6rem 1.5rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-block;
-      }
-      .btn-custom:hover {
-        background-color: #e9ecef;
-        color: #007bff;
-      }
-      .btn-disabled {
-        background-color: #ccc !important;
-        color: #666 !important;
-        cursor: not-allowed !important;
-        pointer-events: none !important;
-      }
-      .status-text {
-        margin-top: 8px;
-        font-size: 1rem;
-        min-height: 1.25rem;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="welcome-box">
-      <h1>ยินดีต้อนรับเข้าสู่</h1>
-      <p>lukeenortaed.site</p>
+          #f00);
+      background-size: 400% 400%;
+      animation: rainbowBorder 6s linear infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
+    }
 
-      <div class="links m-auto">
-        <a
-          id="api-btn"
-          href="https://fastapi888.lukeenortaed.site"
-          class="btn btn-custom"
-          >API Endpoint</a
-        >
-        <div id="api-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
+    @keyframes rainbowBorder {
+      0% {
+        background-position: 0% 50%;
+      }
 
-        <a
-          id="rag-db-btn"
-          href="https://rag-db.lukeenortaed.site"
-          class="btn btn-custom"
-          >RAG DB</a
-        >
-        <div id="rag-db-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
+      50% {
+        background-position: 100% 50%;
+      }
 
-        <a
-          id="rag-btn"
-          href="https://rag-chat-demo.lukeenortaed.site"
-          class="btn btn-custom"
-          >RAG Chat Demo</a
-        >
-        <div id="rag-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
-        <div class="d-flex flex-column justify-content-center align-items-center gap-2 mt-5">
-          <p class="status-text m-0" style="margin-top: 0px;">🔓ต้องการเปิด Server🔓</p>
-          <button onclick="location.href='topup.html'" class="btn btn-custom" style="margin: 0;">คลิก 🚀</button>
-        </div>
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .btn-custom {
+      margin-top: 1.5rem;
+      background-color: white;
+      color: #6610f2;
+      border-radius: 25px;
+      padding: 0.6rem 1.5rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-custom:hover {
+      background-color: #e9ecef;
+      color: #007bff;
+    }
+
+    .btn-disabled {
+      background-color: #ccc !important;
+      color: #666 !important;
+      cursor: not-allowed !important;
+      pointer-events: none !important;
+    }
+
+    .status-text {
+      margin-top: 8px;
+      font-size: 1rem;
+      min-height: 1.25rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="welcome-box">
+    <h1>ยินดีต้อนรับเข้าสู่</h1>
+    <p>lukeenortaed.site</p>
+
+    <div class="links m-auto">
+      <a id="api-btn" href="https://fastapi888.lukeenortaed.site" target="_blank" class="btn btn-custom">API Endpoint</a>
+      <div id="api-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
+
+      <a id="rag-db-btn" href="https://rag-db.lukeenortaed.site" target="_blank" class="btn btn-custom">RAG DB</a>
+      <div id="rag-db-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
+
+      <a id="rag-btn" href="https://rag-chat-demo.lukeenortaed.site" target="_blank" class="btn btn-custom">RAG Chat Demo</a>
+      <div id="rag-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
+
+      <div class="d-flex flex-column justify-content-center align-items-center gap-2 mt-5">
+        <p class="status-text m-0" style="margin-top: 0px;">🔓ต้องการเปิด Server🔓</p>
+        <button onclick="window.open('topup.html', '_blank')" class="btn btn-custom" style="margin: 0;">คลิก 🚀</button>
       </div>
     </div>
+  </div>
 
-    <script>
-      // ช่วยให้ promise ตัดใจภายใน ms ที่กำหนด
-      function withTimeout(promise, ms = 5000) {
-        return Promise.race([
-          promise,
-          new Promise((_, rej) =>
-            setTimeout(() => rej(new Error("timeout")), ms)
-          ),
-        ]);
+  <script>
+    // ช่วยให้ promise ตัดใจภายใน ms ที่กำหนด
+    function withTimeout(promise, ms = 5000) {
+      return Promise.race([
+        promise,
+        new Promise((_, rej) =>
+          setTimeout(() => rej(new Error("timeout")), ms)
+        ),
+      ]);
+    }
+
+    // ping แบบไม่ติด CORS ด้วยการโหลดรูป (แนะนำให้มี /favicon.ico ที่ปลายทาง)
+    function imagePing(url) {
+      return new Promise((resolve) => {
+        const img = new Image();
+        const cacheBuster =
+          (url.includes("?") ? "&" : "?") + "_cb=" + Date.now();
+        img.onload = () => resolve({ ok: true, via: "image" });
+        img.onerror = () => resolve({ ok: false, via: "image" });
+        img.src = url.replace(/\/$/, "") + "/favicon.ico" + cacheBuster;
+      });
+    }
+
+    // ลอง fetch ก่อน (จะได้อ่าน status ถ้า CORS อนุญาต) แล้ว fallback เป็น imagePing
+    async function canReach(url) {
+      try {
+        // ใช้ HEAD ถ้า server รองรับ, ถ้าไม่ก็จะถูก reject แล้วไป fallback
+        const res = await withTimeout(
+          fetch(url, { method: "HEAD", mode: "cors", cache: "no-store" })
+        );
+        // บางกรณี Cloudflare จะตอบ 530/5xx -> !res.ok
+        return { ok: res.ok, status: res.status, via: "fetch" };
+      } catch (e) {
+        // Fallback: ลอง imagePing (ไม่อ่าน status ได้ แต่ช่วยบอกว่า host ตอบกลับหรือไม่)
+        const im = await withTimeout(imagePing(url));
+        return { ok: im.ok, status: im.ok ? 200 : 0, via: im.via };
       }
+    }
 
-      // ping แบบไม่ติด CORS ด้วยการโหลดรูป (แนะนำให้มี /favicon.ico ที่ปลายทาง)
-      function imagePing(url) {
-        return new Promise((resolve) => {
-          const img = new Image();
-          const cacheBuster =
-            (url.includes("?") ? "&" : "?") + "_cb=" + Date.now();
-          img.onload = () => resolve({ ok: true, via: "image" });
-          img.onerror = () => resolve({ ok: false, via: "image" });
-          img.src = url.replace(/\/$/, "") + "/favicon.ico" + cacheBuster;
-        });
-      }
+    function disableBtn(btnEl, statusEl, message) {
+      btnEl.classList.add("btn-disabled");
+      btnEl.href = "javascript:void(0)";
+      statusEl.textContent = message;
+    }
 
-      // ลอง fetch ก่อน (จะได้อ่าน status ถ้า CORS อนุญาต) แล้ว fallback เป็น imagePing
-      async function canReach(url) {
-        try {
-          // ใช้ HEAD ถ้า server รองรับ, ถ้าไม่ก็จะถูก reject แล้วไป fallback
-          const res = await withTimeout(
-            fetch(url, { method: "HEAD", mode: "cors", cache: "no-store" })
-          );
-          // บางกรณี Cloudflare จะตอบ 530/5xx -> !res.ok
-          return { ok: res.ok, status: res.status, via: "fetch" };
-        } catch (e) {
-          // Fallback: ลอง imagePing (ไม่อ่าน status ได้ แต่ช่วยบอกว่า host ตอบกลับหรือไม่)
-          const im = await withTimeout(imagePing(url));
-          return { ok: im.ok, status: im.ok ? 200 : 0, via: im.via };
-        }
-      }
+    async function checkOne(btnId, statusId, label) {
+      const btn = document.getElementById(btnId);
+      const st = document.getElementById(statusId);
 
-      function disableBtn(btnEl, statusEl, message) {
-        btnEl.classList.add("btn-disabled");
-        btnEl.href = "javascript:void(0)";
-        statusEl.textContent = message;
-      }
+      try {
+        const { ok, status, via } = await canReach(btn.href);
 
-      async function checkOne(btnId, statusId, label) {
-        const btn = document.getElementById(btnId);
-        const st = document.getElementById(statusId);
-
-        try {
-          const { ok, status, via } = await canReach(btn.href);
-
-          if (ok) {
-            st.textContent = "✅ พร้อมใช้งาน";
+        if (ok) {
+          st.textContent = "✅ พร้อมใช้งาน";
+        } else {
+          // ถ้าเจอ status 530 ให้บอกชัดเจน
+          if (status === 530) {
+            disableBtn(
+              btn,
+              st,
+              "❌ เข้าไม่ได้ (530: ปลายทาง/Cloudflare มีปัญหา)"
+            );
+          } else if (status >= 500) {
+            disableBtn(
+              btn,
+              st,
+              `❌ เข้าไม่ได้ (ข้อผิดพลาดฝั่งเซิร์ฟเวอร์: ${status})`
+            );
           } else {
-            // ถ้าเจอ status 530 ให้บอกชัดเจน
-            if (status === 530) {
-              disableBtn(
-                btn,
-                st,
-                "❌ เข้าไม่ได้ (530: ปลายทาง/Cloudflare มีปัญหา)"
-              );
-            } else if (status >= 500) {
-              disableBtn(
-                btn,
-                st,
-                `❌ เข้าไม่ได้ (ข้อผิดพลาดฝั่งเซิร์ฟเวอร์: ${status})`
-              );
-            } else {
-              disableBtn(btn, st, "❌ เข้าไม่ได้ (เชื่อมต่อไม่สำเร็จ)");
-            }
+            disableBtn(btn, st, "❌ เข้าไม่ได้ (เชื่อมต่อไม่สำเร็จ)");
           }
-        } catch (err) {
-          disableBtn(btn, st, "❌ เข้าไม่ได้ (เกิดข้อผิดพลาด)");
         }
+      } catch (err) {
+        disableBtn(btn, st, "❌ เข้าไม่ได้ (เกิดข้อผิดพลาด)");
       }
+    }
 
-      async function run() {
-        await Promise.all([
-          checkOne("api-btn", "api-status", "API Endpoint"),
-          checkOne("rag-btn", "rag-status", "RAG Chat Demo"),
-          checkOne("rag-db-btn", "rag-db-status", "RAG DB"),
-        ]);
-      }
+    async function run() {
+      await Promise.all([
+        checkOne("api-btn", "api-status", "API Endpoint"),
+        checkOne("rag-btn", "rag-status", "RAG Chat Demo"),
+        checkOne("rag-db-btn", "rag-db-status", "RAG DB"),
+      ]);
+    }
 
-      window.addEventListener("DOMContentLoaded", run);
-    </script>
-  </body>
+    window.addEventListener("DOMContentLoaded", run);
+  </script>
+</body>
+
 </html>
