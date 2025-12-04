@@ -45,6 +45,42 @@
       }
     }
 
+    .welcome-box-h {
+      position: relative;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.67);
+      padding-top: 1.5rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .welcome-box-h::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 3px;
+      border-radius: 20px;
+      background: linear-gradient(270deg,
+          #f00,
+          #ff7a00,
+          #ffee00,
+          #0f0,
+          #0ff,
+          #00f,
+          #f0f,
+          #f00);
+      background-size: 400% 400%;
+      animation: rainbowBorder 6s linear infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
+    }
+
     .welcome-box {
       position: relative;
       text-align: center;
@@ -138,29 +174,43 @@
 </head>
 
 <body>
-  <div class="welcome-box">
-    <h1>ยินดีต้อนรับเข้าสู่</h1>
-    <p>lukeenortaed.site</p>
+  <div class="container">
+    <div class="row welcome-box-h m-2">
+      <h1>ยินดีต้อนรับเข้าสู่</h1>
+      <p>lukeenortaed.site</p>
+    </div>
 
-    <div class="links m-auto">
-      <a id="api-btn" href="https://fastapi888.lukeenortaed.site" target="_blank" class="btn btn-custom">API Endpoint</a>
-      <div id="api-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
+    <div class="row d-flex justify-content-evenly">
+      <div class="col welcome-box m-1" style="padding: 1rem;">
+        <h2 class="fw-bold pt-2">RAG FastAPI Project</h2>
+        <div class="links m-auto">
+          <a id="api-btn" href="https://fastapi888.lukeenortaed.site" target="_blank" class="btn btn-custom">API
+            Endpoint</a>
+          <div id="api-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
 
-      <a id="rag-db-btn" href="https://rag-db.lukeenortaed.site" target="_blank" class="btn btn-custom">RAG DB</a>
-      <div id="rag-db-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
+          <a id="rag-db-btn" href="https://rag-db.lukeenortaed.site" target="_blank" class="btn btn-custom">RAG DB</a>
+          <div id="rag-db-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
 
-      <a id="rag-btn" href="https://rag-chat-demo.lukeenortaed.site" target="_blank" class="btn btn-custom">RAG Chat Demo</a>
-      <div id="rag-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
+          <a id="rag-btn" href="https://rag-chat-demo.lukeenortaed.site" target="_blank" class="btn btn-custom">RAG Chat
+            Demo</a>
+          <div id="rag-status" class="status-text">⏳ กำลังตรวจสอบ…</div>
 
-      <div class="d-flex flex-column justify-content-center align-items-center gap-2 mt-5">
-        <p class="status-text m-0" style="margin-top: 0px;">🔓ต้องการเปิด Server🔓</p>
-        <button onclick="window.open('topup.html', '_blank')" class="btn btn-custom" style="margin: 0;">คลิก 🚀</button>
+          <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+            <p class="status-text mb-1" style="margin-top: 0px;">🔓ต้องการเปิด Server🔓</p>
+            <button onclick="window.open('topup.html', '_blank')" class="btn btn-custom" style="margin: 0;">คลิก
+              🚀</button>
+          </div>
+        </div>
+      </div>
+      <div class="col welcome-box m-1" style="padding: 1rem;">
+        <h2 class="fw-bold pt-2">React JS Project</h2>
+        <button class="btn btn-custom align-items-center text-align-center ">🛸 Go to React Portfolio Web</button>
       </div>
     </div>
   </div>
 
+
   <script>
-    // ช่วยให้ promise ตัดใจภายใน ms ที่กำหนด
     function withTimeout(promise, ms = 5000) {
       return Promise.race([
         promise,
